@@ -19,6 +19,15 @@ body {
   cursor: pointer;
 }
 
+.menu {
+  position: relative;
+}
+
+#volverPag img {
+  width: 80px;
+  cursor: pointer;
+}
+
 #menu {
   position: relative;
   display: flex;
@@ -26,7 +35,7 @@ body {
   align-items: center;
 }
 
-/* Estilo del botón del menú */
+/* Botón del menú principal siempre visible */
 .burger {
   display: flex;
   flex-direction: row;
@@ -46,10 +55,12 @@ body {
   transform: scale(1.05);
 }
 
+/* Checkbox oculto */
 .burger input {
   display: none;
 }
 
+/* Íconos del menú principal */
 .burger span {
   display: flex;
   align-items: center;
@@ -77,15 +88,16 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none;
+  display: none; /* Oculto por defecto */
   flex-direction: column;
   padding: 10px;
   gap: 10px;
+  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
 }
 
-/* Mostrar el menú cuando el checkbox está activado */
+/* Mostrar el menú desplegable cuando se activa el checkbox */
 .burger input:checked ~ .menu-content {
-  display: flex;
+  display: flex; /* Visible solo cuando el checkbox está activo */
 }
 
 .menu-content img {
@@ -101,88 +113,101 @@ body {
 }
 
 
+
+/* Footer principal */
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00000089;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 5px solid #ffcc00; 
-}
-
-.footer > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #ffcc00;
-}
-
-p {
-  font-size: 14px;
-  color: #BDC3C7;
-  font-weight: 400;
-}
-
-#victoria p, #apuesta p {
-  font-size: 16px;
-  color: #f39c12; 
-  font-weight: bold;
-}
-
-#btnJuego {
   display: flex;
   justify-content: space-around;
-  width: 300px;
-  transition: transform 0.3s ease; 
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-top: 5px solid #444;
 }
 
-#btnJuego img {
-  width: 60px;
-  height: 60px;
-  margin: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.9;
-}
-
-#btnJuego img:hover {
-  transform: scale(1.1); 
-  opacity: 1;
-}
-
-#saldo, #informacion {
+/* Sección de victoria */
+.victoria {
   text-align: center;
 }
 
-#informacion img {
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-#informacion img:hover {
-  transform: rotate(360deg); 
-}
-
-#victoria, #apuesta, #saldo, #informacion {
-  margin-right: 30px;
-}
-
-#saldo p {
+.victoria h3 {
   font-size: 18px;
-  color: #27AE60; 
+  margin-bottom: 5px;
+  color: #4CAF50;
+}
+
+.victoria p {
+  font-size: 16px;
   font-weight: bold;
 }
-  
+
+/* Sección de apuesta */
+.apuesta {
+  text-align: center;
+}
+
+.apuesta h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #FFA500;
+}
+
+.apuesta p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Botones de juego (vertical) */
+.btnJuego {
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  gap: 10px;
+  align-items: center;
+}
+
+.btnJuego img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btnJuego img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Sección de saldo */
+.saldo {
+  text-align: center;
+}
+
+.saldo h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #FFD700;
+}
+
+.saldo p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Sección de información */
+.informacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.informacion img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.informacion img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
