@@ -10,72 +10,179 @@ body {
     justify-content: space-between;
 }
 
+.menu {
+  position: relative;
+}
+
 #volverPag img {
-    width: 80px;
-    cursor: pointer;
-  }
+  width: 80px;
+  cursor: pointer;
+}
 
-  .burger {
-    position: relative;
-    width: 40px;
-    height: 30px;
-    background: transparent;
-    cursor: pointer;
-    display: block;
-  }
-  
-  .burger input {
-    display: none;
-  }
-  
-  .burger span {
-    display: block;
-    position: absolute;
-    height: 4px;
-    width: 100%;
-    background: linear-gradient(90deg, #ff6f61, #ffca61); 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-  }
-  
-  .burger span:nth-of-type(1) {
-    top: 0px;
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(2) {
-    top: 50%;
-    transform: translateY(-50%);
-    transform-origin: left center;
-  }
-  
-  .burger span:nth-of-type(3) {
-    top: 100%;
-    transform-origin: left center;
-    transform: translateY(-50%);
-  }
-  
+#menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .burger input:checked ~ span:nth-of-type(1) {
-    top: 0;
-    left: 5px;
-    transform: rotate(405deg);
-    background: linear-gradient(90deg, #61d4ff, #61ffca); 
-  }
-  
-  .burger input:checked ~ span:nth-of-type(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  
-  .burger input:checked ~ span:nth-of-type(3) {
-    top: 28px;
-    left: 5px;
-    transform: rotate(-405deg);
-    background: linear-gradient(90deg, #61d4ff, #61ffca); 
-  }
+/* Estilo del botón del menú */
+.burger {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.burger:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.burger img:hover {
+  transform: scale(1.1);
+}
+
+/* Contenedor del menú desplegable */
+.menu-content {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* Mostrar el menú cuando el checkbox está activado */
+.burger input:checked ~ .menu-content {
+  display: flex;
+}
+
+.menu-content img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.menu-content img:hover {
+  transform: scale(1.1);
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00000089;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px solid #ffcc00; 
+}
+
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffcc00;
+}
+
+p {
+  font-size: 14px;
+  color: #BDC3C7;
+  font-weight: 400;
+}
+
+#victoria p, #apuesta p {
+  font-size: 16px;
+  color: #f39c12; 
+  font-weight: bold;
+}
+
+#btnJuego {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  transition: transform 0.3s ease; 
+}
+
+#btnJuego img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+#btnJuego img:hover {
+  transform: scale(1.1); 
+  opacity: 1;
+}
+
+#saldo, #informacion {
+  text-align: center;
+}
+
+#informacion img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#informacion img:hover {
+  transform: rotate(360deg); 
+}
+
+#victoria, #apuesta, #saldo, #informacion {
+  margin-right: 30px;
+}
+
+#saldo p {
+  font-size: 18px;
+  color: #27AE60; 
+  font-weight: bold;
+}
   
