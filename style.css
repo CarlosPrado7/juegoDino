@@ -55,10 +55,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Checkbox oculto */
-.burger input {
-  display: none;
-}
 
 /* Íconos del menú principal */
 .burger span {
@@ -78,7 +74,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Contenedor del menú desplegable */
 .menu-content {
   position: absolute;
   top: 60px;
@@ -88,16 +83,15 @@ body {
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none; /* Oculto por defecto */
+  display: none; 
   flex-direction: column;
   padding: 10px;
   gap: 10px;
-  z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+  z-index: 1000; 
 }
 
-/* Mostrar el menú desplegable cuando se activa el checkbox */
 .burger input:checked ~ .menu-content {
-  display: flex; /* Visible solo cuando el checkbox está activo */
+  display: flex; 
 }
 
 .menu-content img {
@@ -112,67 +106,88 @@ body {
   transform: scale(1.1);
 }
 
-
-
 /* Footer principal */
 .footer {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #333;
-  color: white;
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: #0000006d;
   padding: 20px;
-  border-top: 5px solid #444;
+  border-top: 5px solid #ffcc00;
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
 }
 
-/* Sección de victoria */
+/*Seccion de cuanto gana*/
 .victoria {
   text-align: center;
 }
 
 .victoria h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #4CAF50;
+  font-size: 20px;
+  margin-bottom: 3px;
+  color: #ffcc00;
 }
 
 .victoria p {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 /* Sección de apuesta */
-.apuesta {
+.apuestaInfo {
   text-align: center;
 }
 
-.apuesta h3 {
-  font-size: 18px;
+.apuestaInfo h3 {
+  font-size: 20px;
   margin-bottom: 5px;
-  color: #FFA500;
+  color: #ffcc00;
 }
 
-.apuesta p {
-  font-size: 16px;
+.apuestaInfo p {
+  font-size: 18px;
   font-weight: bold;
 }
 
-/* Botones de juego (vertical) */
+/* Botones de juego (horizontal) */
 .btnJuego {
-  display: flex;
-  flex-direction: column; /* Alineación vertical */
-  gap: 10px;
+  display: flex; 
+  justify-content: center; 
   align-items: center;
+  gap: 15px; 
 }
 
-.btnJuego img {
-  width: 50px;
-  height: 50px;
+#apuesta {
+  width: 70px;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.btnJuego img:hover {
+#apuesta:hover{
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+#jugar {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#jugar:hover{
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+#apuestaMax {
+  width: 70px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#apuestaMax:hover{
   transform: scale(1.1);
   opacity: 0.9;
 }
@@ -211,3 +226,4 @@ body {
   transform: scale(1.1);
   opacity: 0.9;
 }
+
