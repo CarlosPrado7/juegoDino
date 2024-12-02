@@ -10,100 +10,63 @@ body {
     justify-content: space-between;
 }
 
-.menu {
-  position: relative;
-}
-
 #volverPag img {
   width: 80px;
   cursor: pointer;
 }
 
+/* Estilo general del menú */
 .menu {
-  position: relative;
+  position: fixed;
+  top: 10px; 
+  right: 30px;
+  width: 0; 
+  height: 60px; 
+  background-color: #333333; 
+  border: none;
+  border-radius: 10px; 
+  overflow: hidden; 
+  transition: width 0.3s ease-in-out, border 0.3s ease-in-out; 
 }
 
-#volverPag img {
-  width: 80px;
-  cursor: pointer;
-}
-
-#menu {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Botón del menú principal siempre visible */
-.burger {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-  background-color: #fff;
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.burger:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-  transform: scale(1.05);
-}
-
-
-/* Íconos del menú principal */
-.burger span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.burger img {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-}
-
-.burger img:hover {
-  transform: scale(1.1);
-}
 
 .menu-content {
-  position: absolute;
-  top: 60px;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none; 
-  flex-direction: column;
-  padding: 10px;
-  gap: 10px;
-  z-index: 1000; 
-}
-
-.burger input:checked ~ .menu-content {
   display: flex; 
+  flex-direction: row; 
+  gap: 15px; 
+  align-items: center; 
+  padding: 0 30px; 
+  height: 100%; 
 }
 
 .menu-content img {
   width: 40px;
   height: 40px;
-  object-fit: cover;
-  transition: transform 0.2s ease;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .menu-content img:hover {
+  transform: scale(1.2); 
+}
+
+#menu-icon {
+  position: fixed;
+  top: 20px; 
+  right: 20px; 
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#menu-icon:hover {
   transform: scale(1.1);
+}
+
+.menu.open {
+  width: 300px;
+  border: 1px solid #ffcc00; 
 }
 
 /* Footer principal */
