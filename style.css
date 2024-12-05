@@ -329,11 +329,14 @@ body {
   border: 2px solid #ffcc00;
 }
 
-.modal-content h1 {
-  font-size: 32px;
-  color: #ff4500;
+#imgTitulo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
   text-shadow: 3px 3px #ffd700;
   margin-bottom: 10px;
+  margin: 0 auto 20px;
 }
 
 

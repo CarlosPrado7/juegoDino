@@ -27,16 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
         // Cambiar el icono del menú
         if (menu.classList.contains('open')) {
             menuIcon.src = 'assets/cerrar.png'; // Cambiar a "cerrar"
-
-            menuIcon.style.width = '30px';
-            menuIcon.style.height = '30px';
-
         } else {
             menuIcon.src = 'assets/menu.png'; // Cambiar a "menu"
-
-            menuIcon.style.width = '';
-            menuIcon.style.height = '';
-
         }
     });
 });
