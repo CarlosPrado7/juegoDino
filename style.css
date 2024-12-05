@@ -23,17 +23,34 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
 }
 
 #volverPag img {
   width: 80px;
   cursor: pointer;
+  margin-right: auto;
+}
+
+#reloj {
+  font-size: 1.2em;
+  padding: 10px 15px;
+  background-color: #ffcc00;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  text-align: center;
 }
 
 /* Estilo general del menú */
 .menu {
   position: fixed;
-  top: 10px; 
+  top: 10px;
+  margin-left: auto; 
   right: 30px;
   width: 0; 
   height: 60px; 
