@@ -52,3 +52,30 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+//Blanco y negro de la pagina
+document.getElementById("blanco-negro").addEventListener("click", function() {
+  var body = document.body;
+
+  if (body.style.filter === "grayscale(100%)") {
+      body.style.filter = "";
+  } else {
+      body.style.filter = "grayscale(100%)";
+  }
+});
+
+//Pantalla completa de la aplicacion
+const pantallaCompleta = document.getElementById('pantallaCompleta');
+
+pantallaCompleta.addEventListener('click', () => {
+  if (!document.fullscreenElement) {
+    // Entrar en pantalla completa
+    document.documentElement.requestFullscreen().catch((err) => {
+      console.error(`Error al intentar entrar en pantalla completa: ${err.message}`);
+    });
+  } else {
+    // Salir de pantalla completa
+    document.exitFullscreen().catch((err) => {
+      console.error(`Error al intentar salir de pantalla completa: ${err.message}`);
+    });
+  }
+});
