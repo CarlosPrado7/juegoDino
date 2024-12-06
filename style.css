@@ -350,6 +350,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000000b7;
+  z-index: 1000;
 }
 
 /* Fondo del modal */

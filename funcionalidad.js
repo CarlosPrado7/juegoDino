@@ -79,3 +79,26 @@ pantallaCompleta.addEventListener('click', () => {
     });
   }
 });
+
+//Musica de la pagina
+ // Obtener referencias al audio y al icono
+ const musica = document.getElementById('musica');
+ const controlVolumen = document.getElementById('controlVolumen');
+
+ // Estado inicial: música desactivada
+ let musicaActiva = false;
+
+ // Agregar un listener al clic del icono
+ controlVolumen.addEventListener('click', () => {
+     if (!musicaActiva) {
+         // Reproducir la música
+         musica.play();
+         controlVolumen.src = 'assets/silencio.png'; // Cambiar el icono a "silencio"
+     } else {
+         // Pausar la música
+         musica.pause();
+         controlVolumen.src = 'assets/volumen.png'; // Cambiar el icono a "volumen"
+     }
+     // Alternar el estado de la música
+     musicaActiva = !musicaActiva;
+ });
